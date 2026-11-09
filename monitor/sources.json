@@ -1,0 +1,203 @@
+{
+  "products": [
+    {
+      "id": "notebook",
+      "name": "NotebookLM"
+    },
+    {
+      "id": "ima",
+      "name": "ima"
+    },
+    {
+      "id": "lexiang",
+      "name": "乐享知识库"
+    },
+    {
+      "id": "weknora",
+      "name": "WeKnora"
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT"
+    },
+    {
+      "id": "workbuddy",
+      "name": "WorkBuddy"
+    },
+    {
+      "id": "doubao",
+      "name": "豆包"
+    },
+    {
+      "id": "patsnap",
+      "name": "智慧芽"
+    },
+    {
+      "id": "xinghe",
+      "name": "星河智源"
+    }
+  ],
+  "sources": [
+    {
+      "id": "notebook-news",
+      "product": "notebook",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=NotebookLM+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "news_lead",
+      "note": "新闻检索线索，不能视作用户口碑或已确认产品变化；名称和产品模块需核验。",
+      "enabled": true
+    },
+    {
+      "id": "ima-news",
+      "product": "ima",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%E8%85%BE%E8%AE%AF+ima+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "news_lead",
+      "note": "新闻检索线索，不能视作用户口碑或已确认产品变化；名称和产品模块需核验。",
+      "enabled": true
+    },
+    {
+      "id": "lexiang-news",
+      "product": "lexiang",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%E8%85%BE%E8%AE%AF+%E4%B9%90%E4%BA%AB+%E7%9F%A5%E8%AF%86%E5%BA%93+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "news_lead",
+      "note": "新闻检索线索，不能视作用户口碑或已确认产品变化；名称和产品模块需核验。",
+      "enabled": true
+    },
+    {
+      "id": "weknora-news",
+      "product": "weknora",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=WeKnora+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "news_lead",
+      "note": "新闻检索线索，不能视作用户口碑或已确认产品变化；名称和产品模块需核验。",
+      "enabled": true
+    },
+    {
+      "id": "chatgpt-news",
+      "product": "chatgpt",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=ChatGPT+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "news_lead",
+      "note": "新闻检索线索，不能视作用户口碑或已确认产品变化；名称和产品模块需核验。",
+      "enabled": true
+    },
+    {
+      "id": "workbuddy-news",
+      "product": "workbuddy",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%E8%85%BE%E8%AE%AF+WorkBuddy+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "news_lead",
+      "note": "新闻检索线索，不能视作用户口碑或已确认产品变化；名称和产品模块需核验。",
+      "enabled": true
+    },
+    {
+      "id": "doubao-news",
+      "product": "doubao",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%E8%B1%86%E5%8C%85+AI+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "news_lead",
+      "note": "新闻检索线索，不能视作用户口碑或已确认产品变化；名称和产品模块需核验。",
+      "enabled": true
+    },
+    {
+      "id": "patsnap-news",
+      "product": "patsnap",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%E6%99%BA%E6%85%A7%E8%8A%BD+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "news_lead",
+      "note": "新闻检索线索，不能视作用户口碑或已确认产品变化；名称和产品模块需核验。",
+      "enabled": true
+    },
+    {
+      "id": "xinghe-news",
+      "product": "xinghe",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%E6%98%9F%E6%B2%B3%E6%99%BA%E6%BA%90+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "news_lead",
+      "note": "新闻检索线索，不能视作用户口碑或已确认产品变化；名称和产品模块需核验。",
+      "enabled": true
+    },
+    {
+      "id": "ima-appstore-cn",
+      "product": "ima",
+      "kind": "apple",
+      "url": "https://itunes.apple.com/cn/rss/customerreviews/id=6737188438/sortBy=mostRecent/json",
+      "category": "review",
+      "note": "2026-10-26 通过 Apple 搜索核对应用名与开发主体；仅中国区 iOS 最新有限样本，不代表全平台用户。",
+      "enabled": true,
+      "app_id": 6737188438,
+      "region": "CN"
+    },
+    {
+      "id": "workbuddy-appstore-cn",
+      "product": "workbuddy",
+      "kind": "apple",
+      "url": "https://itunes.apple.com/cn/rss/customerreviews/id=6761374913/sortBy=mostRecent/json",
+      "category": "review",
+      "note": "2026-10-26 通过 Apple 搜索核对应用名与开发主体；仅中国区 iOS 最新有限样本，不代表全平台用户。",
+      "enabled": true,
+      "app_id": 6761374913,
+      "region": "CN"
+    },
+    {
+      "id": "doubao-appstore-cn",
+      "product": "doubao",
+      "kind": "apple",
+      "url": "https://itunes.apple.com/cn/rss/customerreviews/id=6459478672/sortBy=mostRecent/json",
+      "category": "review",
+      "note": "2026-10-26 通过 Apple 搜索核对应用名与开发主体；仅中国区 iOS 最新有限样本，不代表全平台用户。",
+      "enabled": true,
+      "app_id": 6459478672,
+      "region": "CN"
+    },
+    {
+      "id": "weknora-releases",
+      "product": "weknora",
+      "kind": "github_releases",
+      "url": "https://api.github.com/repos/Tencent/WeKnora/releases?per_page=20",
+      "category": "release",
+      "note": "官方发布记录；首次采集为基线，不等于今天发布。",
+      "enabled": true
+    },
+    {
+      "id": "weknora-issues",
+      "product": "weknora",
+      "kind": "github_issues",
+      "url": "https://api.github.com/repos/Tencent/WeKnora/issues?state=all&sort=updated&direction=desc&per_page=30",
+      "category": "feedback",
+      "note": "开源仓库问题反馈；过滤 PR，issue 可能是提问或功能请求，并非全部为缺陷。",
+      "enabled": true
+    },
+    {
+      "id": "notebook-hn",
+      "product": "notebook",
+      "kind": "hn",
+      "url": "https://hn.algolia.com/api/v1/search_by_date?query=NotebookLM&tags=story&hitsPerPage=30",
+      "category": "discussion",
+      "note": "技术社区帖子线索；提及产品不等于使用评价，未采集全部评论。",
+      "enabled": true,
+      "keyword": "NotebookLM"
+    },
+    {
+      "id": "chatgpt-hn",
+      "product": "chatgpt",
+      "kind": "hn",
+      "url": "https://hn.algolia.com/api/v1/search_by_date?query=ChatGPT&tags=story&hitsPerPage=30",
+      "category": "discussion",
+      "note": "技术社区帖子线索；提及产品不等于使用评价，未采集全部评论。",
+      "enabled": true,
+      "keyword": "ChatGPT"
+    },
+    {
+      "id": "new-products-news",
+      "product": "market",
+      "kind": "rss",
+      "url": "https://news.google.com/rss/search?q=%28%22AI%E7%9F%A5%E8%AF%86%E5%BA%93%22+OR+%22AI%E6%99%BA%E8%83%BD%E4%BD%93%22%29+%28%E5%8F%91%E5%B8%83+OR+%E4%B8%8A%E7%BA%BF%29+when%3A7d&hl=zh-CN&gl=CN&ceid=CN%3Azh-Hans",
+      "category": "discovery",
+      "note": "新产品候选线索，发布报道可能是旧产品更新，不能自动加入竞品库。",
+      "enabled": true
+    }
+  ]
+}

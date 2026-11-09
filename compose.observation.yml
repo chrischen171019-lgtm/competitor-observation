@@ -7,7 +7,7 @@ services:
     environment:
       OBSERVATION_ROOT: /workspace
     volumes:
-      - ../:/workspace:ro
+      - ./:/workspace:ro
     ports:
       - '127.0.0.1:3301:3001'
   web:
@@ -22,10 +22,10 @@ services:
     environment:
       AIHOT_API_BASE: http://api:3001
     volumes:
-      - ../:/workspace:ro
-      - ../data:/workspace/data
-      - ../outputs:/workspace/outputs
-      - ../reports:/workspace/reports
+      - ./:/workspace:ro
+      - ./data:/workspace/data
+      - ./outputs:/workspace/outputs
+      - ./reports:/workspace/reports
     command: ['python3','/workspace/monitor/run.py','--interval','3600']
     depends_on:
       api:

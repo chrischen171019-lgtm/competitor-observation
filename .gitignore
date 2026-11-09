@@ -14,3 +14,9 @@ apps/web/.react-router/
 # Font package unpacked to regenerate the report nameplates (docs/customize.md)
 package/
 fontsource-noto-sans-sc-*.tgz
+
+# Local collection state and generated archives
+data/
+reports/revisions/
+__pycache__/
+*.py[cod]

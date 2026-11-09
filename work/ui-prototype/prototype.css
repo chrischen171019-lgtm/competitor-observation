@@ -1,0 +1,114 @@
+/* Shell and timeline adapted from AIHOT, MIT, Copyright (c) 2026 数字生命卡兹克. */
+:root{--bg:#faf9f6;--paper:#fff;--ink:#202a30;--muted:#59656b;--line:#dfe4e1;--accent:#176b75;--soft:rgba(23,107,117,.08);--top:0px!important;--sidebar:#fdfdfb;--daybar:#f0f2ee}
+html{scroll-padding-top:24px!important}body{background:var(--bg);font:15px/1.75 system-ui,-apple-system,'PingFang SC',sans-serif}body>aside.app-sidebar{display:flex!important;position:fixed;inset:0 auto 0 0;top:0;width:196px;margin:0;padding:26px 14px 18px;background:var(--sidebar);border-right:1px solid var(--line);flex-direction:column;overflow-y:auto;z-index:20}.app-brand{font-size:23px;letter-spacing:-.6px;font-weight:750;color:var(--ink);text-decoration:none;display:flex;gap:9px;align-items:center;padding:0 9px}.brand-dot{width:9px;height:9px;background:var(--accent);border-radius:50%}.app-caption{font-size:11px;color:var(--muted);padding:5px 27px 26px;letter-spacing:1.3px}.nav-label{font-size:11px;color:var(--muted);padding:16px 12px 8px}.app-sidebar nav{display:block}.app-sidebar nav a{display:flex;align-items:center;gap:11px;font-size:14px;font-weight:500;min-height:44px;padding:9px 12px;margin:3px 0;border-radius:8px}.app-sidebar nav a svg{width:18px;height:18px;flex:none}.app-sidebar nav a[aria-current=page]{background:var(--soft);color:var(--accent);font-weight:650}.app-sidebar nav a:hover{background:var(--soft)}.side-bottom{margin-top:auto;padding:36px 10px 0;font-size:12px;color:var(--muted)}.side-bottom a{display:block;padding:8px 0}.app-status{display:flex;gap:7px;align-items:center;font-size:12px}.app-status i{width:6px;height:6px;background:#99733a;border-radius:50%}
+body>main#main,body[data-site-section] > main#main{margin:0 0 0 196px;max-width:none;padding:0 38px 72px!important;min-width:0}.app-top{display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:72px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted);margin-bottom:30px}.app-top span{display:flex;gap:9px;align-items:center}.prototype-tag{font-weight:500;background:#eee9dd;color:#705528;padding:3px 8px;border-radius:5px}.app-content{max-width:none;margin:0}.app-top a{text-decoration:none}.page-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.page-heading h1{font-size:26px;letter-spacing:-.5px;margin:0 0 8px;line-height:1.35}.page-heading p{font-size:14px;color:var(--muted);margin:0}.page-heading .edition{font:12px/1.6 ui-monospace,monospace;text-align:right;color:var(--muted);white-space:nowrap;padding-top:4px}
+#product-switcher{padding-bottom:16px}#product-tabs{overflow:visible;flex-wrap:wrap;gap:6px}#product-tabs button{flex:0 0 auto;min-height:44px;font-size:13px;background:transparent;border:1px solid transparent;padding:8px 12px;border-radius:8px}#product-tabs small{display:none}#product-tabs button[aria-selected=true]{background:var(--soft);color:var(--accent);border-color:var(--line)}.research-toc{margin-bottom:24px;background:transparent}.research-toc nav{display:flex;flex-wrap:wrap;gap:2px}.research-toc nav a{font-size:12px;padding:7px 12px}.research-toc summary{font-size:13px;min-height:44px}#site-competitors>article>header h1,#site-strategy>article>header h1{font-size:34px}.ui-image{background:white}
+.feed-toolbar{display:flex;gap:18px;align-items:center;justify-content:space-between;margin:25px 0 12px}.type-pills{display:flex;flex-wrap:wrap;padding:3px;background:#f0f1ec;border:1px solid #e9ede9;border-radius:24px;gap:3px}.type-pills button,.product-filter button{font:inherit;border:0;background:transparent;cursor:pointer;white-space:nowrap;min-height:44px;padding:8px 16px;border-radius:22px;color:var(--muted);font-size:13px}.type-pills button[aria-pressed=true]{background:white;color:var(--ink);box-shadow:0 1px 3px #202a3018;font-weight:650}.search-field{display:flex;align-items:center;gap:10px;min-height:44px;background:#f3f3ef;border:1px solid var(--line);border-radius:24px;padding:0 16px;width:270px;max-width:100%;flex-shrink:0}.search-field svg{width:16px;color:var(--muted)}.search-field input{border:0;background:transparent;outline:0;min-width:0;width:100%;font:13px/1.6 inherit;color:var(--ink)}.search-field:focus-within{outline:2px solid var(--accent)}.product-filter{display:flex;flex-wrap:wrap;gap:4px;padding-bottom:16px;border-bottom:1px solid var(--line)}.product-filter button{padding:7px 11px;border-radius:7px}.product-filter button[aria-pressed=true]{background:var(--soft);color:var(--accent);font-weight:650}.filter-meta{display:flex;gap:14px;justify-content:space-between;align-items:center;margin:16px 0 12px;font-size:12px;color:var(--muted);flex-wrap:wrap}.date-range{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.date-range input{font:12px system-ui;border:1px solid var(--line);border-radius:7px;padding:8px;background:transparent;color:var(--ink);min-height:40px}.quiet-button{font:inherit;color:var(--accent);border:0;cursor:pointer;background:transparent;min-height:44px;padding:6px 10px}.feed-notice{display:flex;gap:10px;font-size:12px;color:#616b69;background:#f0f2ee;padding:10px 14px;border-radius:8px;margin:12px 0 23px}.feed-notice strong{color:var(--ink);white-space:nowrap;font-weight:600}.feed-day{margin:24px 0 0;padding:0;border:0;scroll-margin-top:20px}.day-header{display:flex;align-items:center;gap:12px;margin:0 0 12px;min-height:44px}.day-header h2{font-size:18px;letter-spacing:0;margin:0}.day-header span{font-size:12px;color:var(--muted)}.day-header .count{margin-left:auto}.feed-rows{list-style:none;padding:0;margin:0}.feed-slot{display:grid;grid-template-columns:58px 24px minmax(0,1fr);padding-bottom:12px;position:relative}.feed-slot>time{font:600 12px/1.8 ui-monospace,monospace;padding-top:18px;color:var(--muted)}.time-rail{position:relative}.time-rail:after{content:'';position:absolute;top:25px;bottom:-37px;left:9px;width:1px;background:#d1d9d5}.time-rail:before{content:'';position:absolute;top:23px;left:6px;width:7px;height:7px;background:var(--accent);border-radius:50%;z-index:1;box-shadow:0 0 0 4px var(--bg)}.feed-slot:last-child .time-rail:after{display:none}.news-card{background:white;border:1px solid var(--line);border-radius:12px;padding:15px 18px 14px;box-shadow:0 1px 2px #202a3006;transition:box-shadow .18s,border-color .18s;min-width:0}.news-card:hover{box-shadow:0 3px 12px #202a300d;border-color:#b7ccc7}.news-source{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--muted)}.source-avatar{background:#edf2f0;color:var(--accent);border-radius:5px;width:22px;height:22px;display:grid;place-items:center;font-size:11px;font-weight:700}.source-kind{border:1px solid var(--line);padding:0px 6px;border-radius:5px;font-size:11px}.source-kind.official{color:#176b75;border-color:#b9d5d6;background:#f0f8f7}.news-source .product-name{margin-left:auto;color:var(--accent);font-size:12px}.news-card h3{font-size:17px;line-height:1.6;margin:9px 0 6px;font-weight:650}.headline-button{color:inherit;text-align:left;font:inherit;border:0;padding:0;background:transparent;cursor:pointer}.headline-button:hover{color:var(--accent)}.news-card p{color:var(--muted);font-size:14px;line-height:1.8;margin:5px 0 12px;overflow-wrap:anywhere}.news-foot{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}.news-foot>a{margin-left:auto;text-decoration:none;padding:4px 0;min-height:32px}.news-topic{color:var(--muted)}.evidence-state{color:#806125}.empty-feed{text-align:center;padding:65px 20px;background:white;border:1px solid var(--line);border-radius:12px}.empty-feed h2{font-size:18px;margin:0 0 12px}.empty-feed p{font-size:14px;color:var(--muted)}.more-row{text-align:center;margin:26px 0}.more-row button{border:1px solid var(--line);background:white;min-height:44px;padding:10px 28px;border-radius:24px;cursor:pointer;color:var(--accent)}.feed-end{font-size:12px;color:var(--muted);text-align:center;margin:32px 0}.news-dialog{max-width:760px;width:calc(100vw - 32px);max-height:85vh;overflow:auto;border:1px solid var(--line);border-radius:16px;padding:26px;color:var(--ink)}.news-dialog::backdrop{background:#202a3066}.dialog-top{display:flex;justify-content:space-between;align-items:center}.dialog-top button{border:1px solid var(--line);border-radius:6px;background:white;min-height:44px;padding:8px 14px;cursor:pointer}.news-dialog h2{font-size:24px;margin:22px 0 16px}.news-dialog p{font-size:15px;overflow-wrap:anywhere}.news-dialog dl{font-size:13px;display:grid;grid-template-columns:95px 1fr;gap:8px}.news-dialog dd{margin:0;overflow-wrap:anywhere}.news-dialog blockquote{margin:18px 0;padding:16px;background:var(--bg);border-left:3px solid var(--accent);font-size:14px;overflow-wrap:anywhere}.news-dialog .original{display:inline-block;padding:10px 18px;background:var(--accent);color:white;border-radius:8px;text-decoration:none;margin-top:16px}.skip:focus{left:210px;z-index:60}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:1100px){.feed-toolbar{flex-wrap:wrap}.search-field{width:100%}.page-heading .edition{display:none}body>main#main,body[data-site-section]>main#main{padding-left:25px!important;padding-right:25px!important}}
+@media(max-width:760px){body>aside.app-sidebar{position:static;width:auto;height:auto;padding:16px;border-right:0;border-bottom:1px solid var(--line);overflow:visible}.app-caption,.nav-label,.side-bottom{display:none}.app-sidebar nav{display:flex;flex-wrap:wrap;margin-top:14px;gap:3px}.app-sidebar nav a{font-size:12px;padding:7px 9px;gap:5px}.app-sidebar nav svg{width:15px!important}.app-brand{font-size:21px}body>main#main,body[data-site-section]>main#main{margin:0;padding:0 16px 40px!important}.app-top{min-height:55px;margin-bottom:23px;flex-wrap:wrap;padding:10px 0;gap:5px}.app-top>a{font-size:11px}.page-heading h1{font-size:24px}.feed-toolbar{gap:12px;margin-top:20px}.type-pills{width:100%}.type-pills button{flex:1;padding:7px 8px;font-size:12px}.product-filter{gap:0}.product-filter button{font-size:12px;padding:6px 9px}.feed-notice{display:block}.feed-notice strong{display:block;margin-bottom:4px}.feed-slot{grid-template-columns:1fr;padding:0;border-bottom:1px solid var(--line)}.feed-slot>time{padding:12px 0 0;font-size:11px}.time-rail{display:none}.news-card{border:0;border-radius:0;box-shadow:none;background:transparent;padding:7px 0 18px}.news-card:hover{box-shadow:none}.day-header{background:var(--daybar);padding:8px 10px;border-radius:6px}.day-header h2{font-size:16px}.news-source .product-name{font-size:11px}.news-card h3{font-size:16px}.news-foot{gap:8px;flex-wrap:wrap}.news-foot>a{margin-left:0}.news-dialog{padding:20px}.news-dialog dl{grid-template-columns:1fr;gap:4px}.news-dialog dd{margin-bottom:8px}.skip:focus{left:10px}.date-range input{max-width:135px}.app-content{width:100%}#product-tabs{gap:2px}#product-tabs button{font-size:12px;padding:6px 9px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+/* Product tabs use the same pill treatment as the source switcher. */
+#product-switcher{padding-bottom:22px}
+#product-tabs{display:flex;align-items:center;gap:3px;padding:3px;background:#f0f1ec;border:1px solid #e9ede9;border-radius:28px;overflow-x:auto;flex-wrap:nowrap}
+#product-tabs button{flex:0 0 auto;min-height:44px;font-size:14px;background:transparent;border:0;padding:8px 16px;border-radius:23px;color:var(--muted);white-space:nowrap}
+#product-tabs button[aria-selected=true]{background:white;color:var(--ink);border:0;box-shadow:0 1px 3px #202a3018;font-weight:650}
+#product-tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* The dynamic feed has one product switch; source kind remains evidence metadata on each item. */
+.type-pills{overflow-x:auto;flex-wrap:nowrap}
+.type-pills button{flex:0 0 auto}
+@media(max-width:760px){#product-tabs{border-radius:24px}#product-tabs button{font-size:12px;padding:7px 12px}.type-pills button{font-size:12px;padding:7px 12px}}
+/* AIHOT alignment review: a shared reading edge and shrinkable filter controls. */
+:root{--content-width:100%}
+.app-top,#product-switcher,.research-toc,#site-competitors,#site-updates,#site-feedback,#site-strategy{max-width:none;margin-left:auto;margin-right:auto}
+main#main>div[role=tabpanel]{min-width:0}
+.app-top>span{flex-wrap:wrap;min-width:0}
+.feed-toolbar{flex-wrap:wrap;align-items:center;gap:12px 18px}
+.feed-toolbar .type-pills{flex:1 1 640px;min-width:0;max-width:100%;width:fit-content}
+.feed-toolbar .search-field{flex:0 1 270px;width:270px;min-width:180px}
+#product-tabs,.type-pills{max-width:100%;min-width:0;scroll-padding-inline:8px;padding:4px;gap:3px;border-radius:28px}
+#product-tabs button,.type-pills button{font:500 14px/1.6 system-ui,-apple-system,'PingFang SC',sans-serif;min-height:44px;padding:8px 16px;border-radius:24px}
+#product-tabs button[aria-selected=true],.type-pills button[aria-pressed=true]{font-weight:650;background:white;color:var(--ink);box-shadow:0 1px 3px #202a3018}
+#product-tabs button:focus-visible,.type-pills button:focus-visible{outline-offset:-2px}
+#site-feedback .feedback-filters label{min-width:0}
+#site-feedback .feedback-filters select{max-width:100%}
+#site-feedback .feedback-filters>.note{flex:1 1 250px;overflow-wrap:anywhere}
+#site-strategy table{display:block;overflow-x:auto;max-width:100%}
+@media(max-width:760px){.feed-toolbar .type-pills{flex-basis:100%}.feed-toolbar .search-field{flex:1 1 100%;width:100%;min-width:0}#product-tabs button,.type-pills button{font-size:12px;padding:8px 12px}.app-top>span{row-gap:4px}}
+
+/* Content alignment: keep the reading edge at the left of the available content area. */
+.app-content,.app-top,#product-switcher,.research-toc,#site-competitors,#site-updates,#site-feedback,#site-strategy{margin-left:0;margin-right:0}
+
+/* Global responsive system: fluid gutters, readable measure, and no accidental page overflow. */
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:hidden}
+body{min-width:0;overflow-x:hidden}
+img,svg,video,canvas{max-width:100%;height:auto}
+.app-content,.app-top,#product-switcher,.research-toc,#site-competitors,#site-updates,#site-feedback,#site-strategy{width:100%;max-width:none;min-width:0}
+#site-competitors>article,#site-strategy>article{min-width:0}
+#site-competitors .real-ui,#site-competitors figure,#site-competitors .ui-image,#site-strategy figure{max-width:100%;overflow:hidden}
+#site-competitors .ui-image img,#site-competitors figure img,#site-strategy figure img{display:block;width:auto;max-width:100%;height:auto}
+#site-strategy table{width:100%;max-width:100%;display:block;overflow-x:auto}
+.feed-toolbar,.filter-meta,.news-foot,.feedback-filters,.perception-title{min-width:0}
+.news-card,.feedback-card,.perception-card,.news-dialog,.digest-paper{min-width:0;overflow-wrap:anywhere}
+@media (max-width:1100px){
+ :root{--content-width:100%}
+ body>main#main,body[data-site-section]>main#main{padding-inline:clamp(20px,4vw,32px)!important}
+ body>aside.app-sidebar{width:180px}
+ body>main#main,body[data-site-section]>main#main{margin-left:180px}
+ .app-top{min-height:64px}
+ .page-heading{flex-wrap:wrap}
+ .page-heading>div{min-width:0}
+ .feed-toolbar .type-pills{flex-basis:100%}
+ .feed-toolbar .search-field{flex:1 1 260px;width:auto}
+ .digest-layout{margin-inline:calc(clamp(20px,4vw,32px) * -1)}
+}
+@media (max-width:760px){
+ body>aside.app-sidebar{width:100%;position:relative}
+ body>main#main,body[data-site-section]>main#main{margin-left:0;padding-inline:16px!important}
+ .app-sidebar nav{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}
+ .app-sidebar nav a{flex:0 0 auto}
+ .app-top{align-items:flex-start;min-height:0;padding-block:14px;flex-direction:column}
+ .app-top>a{max-width:100%;overflow-wrap:anywhere}
+ .app-content,.app-top,#product-switcher,.research-toc,#site-competitors,#site-updates,#site-feedback,#site-strategy{max-width:none}
+ #site-competitors>article>header h1,#site-strategy>article>header h1{font-size:clamp(26px,8vw,34px)}
+ .research-toc nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .research-toc nav a{min-width:0;overflow-wrap:anywhere}
+ .feed-toolbar .type-pills{width:100%;flex-basis:100%}
+ .feed-toolbar .search-field{width:100%;flex-basis:100%}
+ .filter-meta{align-items:flex-start;flex-direction:column}
+ .date-range{width:100%}
+ .date-range input{flex:1;min-width:0;max-width:none}
+ .news-source .product-name{margin-left:0}
+ .news-foot{align-items:flex-start;flex-direction:column;gap:4px}
+ .news-foot>a{margin-left:0}
+ .feedback-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .feedback-filters>.note{grid-column:1/-1}
+ .perception-card{grid-template-columns:32px minmax(0,1fr)}
+ .perception-title>strong{margin-left:0}
+ .digest-layout{display:block;margin-inline:-16px}
+ .digest-archive{height:auto;position:static;padding:16px;border-right:0;border-bottom:1px solid var(--line)}
+ #digest-reader{padding:20px 16px}
+ .digest-dateline,.digest-nameplate,.digest-meta{max-width:100%}
+ .digest-nameplate{display:block}
+ .digest-nameplate>div:first-child{margin-bottom:14px}
+ .digest-nameplate h1{font-size:clamp(32px,10vw,48px);letter-spacing:-1px}
+ .digest-nameplate .issue-box{width:100%;max-width:100%}
+ .digest-columns{display:block}
+ .digest-paper .hero{padding-block:24px}
+ .digest-paper .story{padding-block:20px}
+ .digest-paper .story h2{font-size:20px}
+ .digest-paper .takeaways{padding:0}
+ #digest-neighbours{grid-template-columns:1fr;gap:0}
+ #digest-neighbours button:last-child{border-left:0;border-top:1px solid var(--line);padding-left:0;text-align:left}
+}
+@media (max-width:420px){
+ body{font-size:14px}
+ .app-sidebar nav a{font-size:11px;padding-inline:8px}
+ .research-toc nav{grid-template-columns:1fr}
+ .type-pills button,#product-tabs button{font-size:11px;padding-inline:10px}
+ .feedback-filters{grid-template-columns:1fr}
+ .feedback-filters>.note{grid-column:auto}
+ .news-dialog{width:calc(100vw - 20px);padding:16px}
+ .news-dialog h2{font-size:20px}
+ .digest-paper .intro{font-size:15px}
+}

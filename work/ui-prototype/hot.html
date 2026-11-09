@@ -1,0 +1,8 @@
+<div id="site-hot" role="tabpanel" aria-label="竞品热点榜" hidden>
+<header class="hot-head"><div><div class="hot-kicker">48H / HOT TOPICS</div><h1>竞品热点榜</h1><p id="hot-summary">过去 48 小时，九产品合并 Top 10</p></div><small>快照截至 HOT_CUTOFF（北京时间）<br>按来源关注热度排序 · 原型口径</small></header>
+<div class="hot-controls"><label>关注范围 <select id="hot-product"><option value="all">全部 9 个产品</option>HOT_OPTIONS</select></label><button id="hot-method-button" class="quiet-button">热度怎么算 ↗</button></div>
+<div class="hot-scope"><b>当前是来源关注榜原型。</b>覆盖 HOT_START — HOT_CUTOFF 的已采集发布与讨论，展示人工归组样本中的 Top 10；还不是完整的全网讨论榜。来源数量按渠道保守去重，未获取全部账号身份及评论增量。</div>
+<div id="hot-board"></div>
+<details id="hot-method" class="hot-method"><summary>热度怎么算？哪些数据没有计入？</summary><p>参考 AIHOT：按事件合并，48 小时窗口内同一发布渠道只计一次，取最近一条记录的时间，每过 24 小时权重减半。相加得到来源关注热度，不是产品评分，也不代表总体满意度。</p><p>同一渠道多次发稿不重复加热；已辨认的同源转载合并。现有数据没有完整发布者身份，Hacker News 保守算作一个平台。各媒体署名按已采集 RSS 归一，尚未完成全部转载关系核验，因此不称为独立机构人数。</p><p>只计算窗口内发布且在截止时间前采集的记录。历史补录不冒充新发布；旧帖累计评论即使很高，也不算这 48 小时的新增讨论。当前没有同口径的小时快照，不展示走势、涨跌或“爆”的标签。</p><p>事件标题为便于阅读的归组说明，不等于事实核验。本期只基于已有材料人工归组，9 个产品的覆盖并不完整；不足 10 件时按实际数量显示。正式讨论热度需补充官号、媒体及社区账号身份与带时间的互动数据。</p></details>
+</div>
+<dialog class="news-dialog" id="hot-detail" aria-label="热点事件证据"><div class="dialog-top"><span>热点 / 报道与讨论</span><button id="close-hot">关闭 ×</button></div><div id="hot-detail-body"></div></dialog>
