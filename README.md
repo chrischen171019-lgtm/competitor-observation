@@ -4,7 +4,15 @@
 
 ## 本地预览
 
-当前页面由静态 HTML 原型和 AIHOT API 服务共同提供。先准备 `.env`（可从 `.env.example` 复制并按需填写），再启动：
+最快的本机方式（Node.js 24，首次先 `npm ci`，不需要 PostgreSQL）：
+
+```bash
+npm run dev:observe
+```
+
+打开 <http://127.0.0.1:3300/observe/outputs/competitor-ui-prototype.html>。同一服务提供 `POST /api/observation/events`，用于 Harness 推送；首次启动自动生成 `.env.observation` 中的本机密钥。请求格式和使用方法见 [Harness 推送说明](docs/competitor-observation-live.md#harness-推送)。本机服务只监听本机地址，不自动抓取数据。
+
+需要启动完整 AIHOT 底座与每小时采集时，准备 `.env`（从 `.env.example` 复制并按需填写），停止独立服务后启动：
 
 ```bash
 docker compose -f docker-compose.yml -f compose.observation.yml up --build
@@ -14,7 +22,7 @@ docker compose -f docker-compose.yml -f compose.observation.yml up --build
 
 ## 更新观察数据
 
-项目包含 `monitor/` 下的来源采集、整理和同步脚本。先在 `monitor/sources.json` 配置观察来源，再按 `.env.example` 配置 API 连接信息。采集器写入的 API 数据与页面快照更新是两个步骤；仅成功写入 API 不代表页面快照已刷新。当前仓库提交的 `outputs/observation.json` 是可直接预览的最近一次快照，持续更新流程仍需按部署环境配置并验证。
+项目包含 `monitor/` 下的来源采集、整理和同步脚本。内置采集器重新生成页面快照；Harness 使用 `POST /api/observation/events` 保存到独立 SQLite，网页读取时合并，因此不会被下一次采集覆盖。页面每分钟读取一次最新数据，手动刷新可立即读取。外部推送显示为待核验线索，暂不自动编入日报或口碑主题。AIHOT 的 `/api/ingest/items` 仍是另一条数据库导入路径。
 
 ## 目录
 

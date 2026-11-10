@@ -1,0 +1,13 @@
+{
+  "source_id": "harness-local",
+  "items": [
+    {
+      "product": "ima",
+      "title": "替换为采集到的真实发布标题",
+      "url": "https://example.org/replace-with-original-source",
+      "excerpt": "替换为原文摘录；不要将推测写成已验证事实",
+      "published_at": null,
+      "publisher": "替换为发布机构或来源名称"
+    }
+  ]
+}

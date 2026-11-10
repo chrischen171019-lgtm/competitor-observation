@@ -20,3 +20,5 @@ data/
 reports/revisions/
 __pycache__/
 *.py[cod]
+outputs/monitor-data.json
+outputs/prototype-news.json

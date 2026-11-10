@@ -6,6 +6,7 @@ services:
   api:
     environment:
       OBSERVATION_ROOT: /workspace
+      OBSERVATION_PUSH_DIR: /data/observation
     volumes:
       - ./:/workspace:ro
     ports:

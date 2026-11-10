@@ -52,3 +52,6 @@ run("state.product='ima';state.q='';const next=JSON.parse(JSON.stringify(PROTOTY
 assert.equal(run('PROTOTYPE.events.length'),beforeLive+1);assert.equal(run('state.product'),'ima');
 run('visibleLimit=9999;render()');assert(els['news-feed'].innerHTML.includes('日期待核验'));
 console.log('PASS: API snapshot adds a new record, preserves filters, and handles unknown publication dates.');
+run("const sameTime=JSON.parse(JSON.stringify(PROTOTYPE));sameTime.revision='push-revision-two';sameTime.events.push({...sameTime.events.find(e=>e.product==='ima'),id:'same-time-new',title:'同一时间戳的推送'});acceptObservation(sameTime)");
+assert.equal(run('PROTOTYPE.events.length'),beforeLive+2);
+console.log('PASS: a changed push revision refreshes content even with an unchanged snapshot timestamp.');

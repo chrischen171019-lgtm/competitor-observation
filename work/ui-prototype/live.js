@@ -8,7 +8,7 @@ function renderSourceHealth(){
 }
 function acceptObservation(data){
  if(data.schema_version!==1||!Array.isArray(data.events)||!Array.isArray(data.reports)||!data.perceptions||!Array.isArray(data.source_status))throw Error('Invalid observation response');
- if(data.cutoff!==PROTOTYPE.cutoff){Object.assign(PROTOTYPE,data);PERCEPTIONS=data.perceptions;render();renderReport();renderPerceptions();}
+ if((data.revision||data.cutoff)!==(PROTOTYPE.revision||PROTOTYPE.cutoff)){Object.assign(PROTOTYPE,data);PERCEPTIONS=data.perceptions;render();renderReport();renderPerceptions();}
  renderSourceHealth();
 }
 async function refreshObservation(){
